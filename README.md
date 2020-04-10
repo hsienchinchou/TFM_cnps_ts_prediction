@@ -1,6 +1,6 @@
-THIS IS WORK IN PROGRESS
+This is for the Master Thesis in Universidad Carlos III de Madrid
 
-# blog-garnelo_neural_2018
+# TFM_cnps_ts_prediction
 
 This Python package constitutes a toolbox for neural processes, based on tensorflow.
 
