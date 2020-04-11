@@ -1,6 +1,7 @@
-This is for the Master Thesis in Universidad Carlos III de Madrid
+THIS IS FOR THE MASTER THESIS FROM UNIVERSIDAD CARLOS III DE MADRID, SPAIN
 
-# TFM_cnps_ts_prediction
+# Conditional Neural Processes for Time Series Prediction
+## TFM_cnps_ts_prediction
 
 This Python package constitutes a toolbox for neural processes, based on tensorflow.
 
