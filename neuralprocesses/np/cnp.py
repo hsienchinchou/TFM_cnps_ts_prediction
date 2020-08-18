@@ -10,7 +10,7 @@ import tensorflow_probability as tfp
 
 from neuralprocesses.np.decoder import MLPDecoder
 from neuralprocesses.np.encoder import DeterministicMLPEncoder
-from neuralprocesses.np.aggregator import MeanAggregator
+from neuralprocesses.np.aggregator import MeanAggregator, RNNAggregator
 from neuralprocesses.np.aux import RegressionInput
 
 
@@ -33,7 +33,7 @@ class ConditionalNeuralProcess:
     def _choose_encoder(encoder_spec):
         if type(encoder_spec) is str:
             if encoder_spec == "MLP":
-                return DeterministicMLPEncoder([128,128,128,128])
+                return DeterministicMLPEncoder([20,20,20,20])
             else:
                 raise ValueError("Unknown encoder specification")
         else:
@@ -44,6 +44,8 @@ class ConditionalNeuralProcess:
         if type(aggregator_spec) is str:
             if aggregator_spec == "Mean":
                 return MeanAggregator()
+            elif aggregator_spec == "RNN":
+                return RNNAggregator()
             else:
                 raise ValueError("Unknown aggregator specification")
         else:
@@ -53,7 +55,7 @@ class ConditionalNeuralProcess:
     def _choose_decoder(decoder_spec):
         if type(decoder_spec) is str:
             if decoder_spec == "MLP":
-                return MLPDecoder([128,128,128,128])
+                return MLPDecoder([20,20,20,20])
             else:
                 raise ValueError("Unknown encoder specification")
         else:
